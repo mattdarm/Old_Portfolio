@@ -1,0 +1,74 @@
+#statistics {
+   background-image: url('../images/stats-bg3.jpg');
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   @media @small {
+   // background-size: 100%;
+   }
+   .padding-top-bottom(120px, 150px);
+   @media @small {
+      .padding-top-bottom(200px, 200px);
+   }
+   @media @large {
+      .padding-top-bottom(250px, 250px)
+   }
+}
+
+.statistics-item {
+   .center-text;
+}
+
+.stat {
+   background-color: @dark-bg;
+   width: 150px;
+   height: 75px;
+   margin: 0 auto;
+   &:before {
+      content: '';
+      .absolute;
+      margin-top: -10px;
+      margin-left: -85px;
+      width: 30px;
+      height: 30px;
+      border-top: 10px solid @brand-primary;
+      border-left: 10px solid @brand-primary;
+   }
+   &:after {
+      content: '';
+      .absolute;
+      margin-top: -30px;
+      margin-left: 55px;
+      width: 30px;
+      height: 30px;
+      border-bottom: 10px solid @brand-primary;
+      border-right: 10px solid @brand-primary;
+      overflow: hidden;
+   }
+   @media @medium {
+      width: 200px;
+      height: 100px;
+      margin-top: 0px;
+      &:before {
+         margin-left: -110px;
+      }
+      &:after {
+         margin-left: 80px;
+         margin-top: -25px;
+      }
+   }
+}
+   h2 {
+      padding-top: 0px;
+      margin-bottom: 0px;
+      margin-top: 80px;
+      @media @small {
+         margin-top: 0px;
+      }
+      @media @medium {
+         padding-top: 10px;
+         margin-bottom: 10px;
+         margin-top: 0px;
+      }
+   }

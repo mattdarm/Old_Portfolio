@@ -1,0 +1,91 @@
+// Padding in sections (top-bopttom)
+.padding-top-bottom(@p-top;@p-bottom) {
+	padding: @p-top 0 @p-bottom;
+}
+
+.list-style-none {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.v-align {
+	vertical-align: middle;
+}
+
+.basic-transition {
+	transition: all 0.2s ease-in-out;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.block {
+	display: block;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+
+.heading-decor-square {
+	&:before {
+		content: '';
+		.absolute;
+		width: 100px;
+		height: 100px;
+		margin-top: -25px;
+		margin-left: -50px;
+		background: @light-gray;
+		z-index: -1;
+   }
+}
+
+.under-decor-line {
+      .block;
+		margin: 0 auto;
+		margin-top: 40px;
+		margin-bottom: 40px;
+      width: 80px;
+      height: 6px;
+      background: @brand-primary;
+}
+
+.heading-decor-brackets {
+	&:after {
+		content: '';
+		.absolute;
+		width: 20px;
+		height: 20px;
+		top: 70px;
+		@media @small {
+			top: -10px;
+		}
+		border-top: 8px solid @brand-primary;
+		border-right: 8px solid @brand-primary;
+	}
+	&:before {
+		content: '';
+		.absolute;
+		width: 20px;
+		height: 20px;
+		margin-top: 40px;
+		margin-left: -20px;
+		border-bottom: 8px solid @brand-primary;
+		border-left: 8px solid @brand-primary;
+	}
+}

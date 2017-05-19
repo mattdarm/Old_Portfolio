@@ -1,0 +1,47 @@
+#about-me {
+   .alt-bg;
+   .padding-top-bottom(100px, 80px);
+      @media @small {
+         .padding-top-bottom(160px, 120px);
+      }
+      @media @large {
+         .padding-top-bottom(200px, 160px)
+      }
+
+   h2 {
+      .heading-decor-brackets;
+   }
+   img {
+      margin: 80px auto 40px auto;
+      border: 10px solid @text-color;
+      width: 150px;
+      height: 150px;
+      filter: brightness(80%);
+      &:hover {
+         filter: brightness(100%);
+         border: 10px solid @brand-primary;
+         .basic-transition;
+      }
+      &:after {
+         content: '';
+         .absolute;
+         top: 0px;
+         left: 0px;
+         width: 100%;
+         height: 100%;
+         background-color: @brand-primary;
+      }
+      @media @small {
+         width: 250px;
+         height: 250px;
+      }
+   }
+   p {
+      @media @small {
+         margin: 60px 80px 60px 80px;
+      }
+      @media @medium {
+         margin: 80px 250px 60px 250px;
+      }
+   }
+}
